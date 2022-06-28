@@ -22,7 +22,6 @@ public class PlanetRotation : MonoBehaviour
 
     IEnumerator AnimationCurveCor()
     {
-
         while (true)
         {
             transform.rotation = Quaternion.Euler(0, _animationCurve.Evaluate(_curveValue), 0); // Take corresponding value of keys (x-axis)

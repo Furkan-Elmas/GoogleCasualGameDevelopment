@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] GameObject _saturnPanel;
     [SerializeField] GameObject _sunPanel;
 
-    public static UIManager Instance { get; private set; }
+    public static UIManager Instance { get; private set; } // Singleton
 
 
     void Awake()

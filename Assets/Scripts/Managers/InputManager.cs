@@ -24,7 +24,8 @@ public class InputManager : MonoBehaviour
     }
 
     void Update()
-    {
+    {   
+        // Taking input data on update method
         _mouseScrollDelta = Input.GetAxis("Mouse ScrollWheel");
         _isClicking = Input.GetButton("Fire1");
     }

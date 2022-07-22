@@ -1,23 +1,22 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using System;
 
-public class PlanetRotation : MonoBehaviour
+public class PlanetController : MonoBehaviour
 {
-    [SerializeField] private Transform _centralPlanet;
-    [SerializeField] private AnimationCurve _animationCurve;
+    [SerializeField] Transform _centralPlanet;
+    [SerializeField] AnimationCurve _animationCurve;
     [SerializeField] float _selfRotationSpeed = 50;
     [SerializeField] float _spaceRotationSpeed = 25;
 
-    private float _curveValue;
-    private float _rotationLoopValue;
+    float _curveValue;
+    float _rotationLoopValue;
+
 
     void Start()
     {
-        StartCoroutine(AnimationCurveCor());
-
         _animationCurve.AddKey(360, 360); // For calculate full tour of a planet
+
+        StartCoroutine(AnimationCurveCor());
     }
 
     IEnumerator AnimationCurveCor()
